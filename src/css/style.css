@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500&display=swap');
 
 header {
-    background: #BBBBBB;
+    background: #000000;
     padding: 20px 0;
 }
 
@@ -15,13 +15,28 @@ body {
     position: relative;
     width: 940px;
     margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.caixa h1 {
+    text-transform: uppercase;
+    color: #FFFF;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
 }
 
 nav {
     position: absolute;
     top: 110px;
     right: 0px;
+}
 
+nav ul {
+    transform: translate(3px, -110px);
 }
 
 nav li {
@@ -31,15 +46,15 @@ nav li {
 
 nav a {
     text-transform: uppercase;
-    color: #000000;
+    color: #FFFF;
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: #c78c19;
-    text-decoration: underline;
+    color: #555555;
+    text-decoration: none;
 }
 
 .servicos {
@@ -92,8 +107,8 @@ nav a:hover {
 
 footer {
     text-align: center;
-    background: url(../imagens/bg.jpg);
-    padding: 40px 0;
+    background-color: #000000;
+    padding: 2px 0;
 }
 
 .copyrigth {
@@ -104,6 +119,10 @@ footer {
 
 form {
     margin: 40px 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 form label,
@@ -111,15 +130,21 @@ form legend {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
+    font-weight: 900;
+    width:54%;
 }
 
-.imput_padrao {
+.input_padrao {
     display: block;
     margin: 0 0 20px;
     padding: 10px 25px;
     width: 50%;
+    border: 2px solid black;
 }
 
+fieldset {
+    width: 54%;
+}
 checkbox {
     margin: 20px;
 }
@@ -144,6 +169,7 @@ checkbox {
 
 table {
     margin: 20px 0 40px;
+    transform: translate(570px, 10px);
 }
 
 thead {
@@ -164,10 +190,9 @@ th {
 }
 
 .principal {
-    padding: 3em 0;
-    background: #FEFEFE;
-    width: 940px;
-    margin: 0 auto;
+    padding: 3em 3em;
+
+    height: 300px;
 
 }
 
@@ -180,7 +205,7 @@ th {
 
 
 .principal p {
-    margin: 0 0 1em;
+    margin: 0 0 0.8em;
 }
 
 .principal strong {
@@ -192,32 +217,38 @@ th {
 }
 
 .utensilios {
-    width: 120px;
+    width: 157px;
     float: left;
-    margin: 0 20px 20px 0;
+    margin: 0 10px 10px 0;
 }
 
 .beneficios {
     padding: 3em 0;
-    background-color: #888888;
-
 }
 
 .conteudo_beneficios {
     width: 640px;
     margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .lista_beneficios {
     width: 40%;
     float: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .imagem_beneficios {
     width: 60%;
     opacity: 1;
     transition: 400ms;
-    box-shadow: 10px 10px 10px #000000;
+    box-shadow: 10px 10px 10px #BBBB;
 }
 
 .imagem_beneficios:hover {
@@ -226,7 +257,7 @@ th {
 
 .mapa {
     padding: 3em 0;
-    background: linear-gradient(#FEFEFE,#888888) ;
+    background-color: #000000;
 }
 
 .mapa_conteudo {
@@ -234,9 +265,14 @@ th {
     margin: 0 auto;
 }
 
+.mapa h3 {
+    color:#FFFF
+}
+
 .mapa p {
     margin: 0 0 2em;
     text-align: center;
+    color:#FFFF
 }
 
 .video {
@@ -246,10 +282,11 @@ th {
 
 .itens {
     line-height: 1.5;
+
+    color: #000000;
+    font-weight: 400;
 }
-.itens:first-child {
-    font-weight: bold;
-}
+
 .itens::before{
     content: "✭"
 }
